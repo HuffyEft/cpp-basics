@@ -1,14 +1,8 @@
 #include <iostream>
 
-#include <cmath>
-
-
-
 using namespace std;
 
-
-
-int main() {
+void main() {
 
 	double a, z1, z2;
 
@@ -21,7 +15,5 @@ int main() {
 	z2 = 2 * sin(a);
 
 	cout << "z1 = " << z1 << endl << "z2 = " << z2 << endl;
-
-	cin.get();
 
 }
