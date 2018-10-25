@@ -4,7 +4,8 @@
 
 using namespace std;
 
-void printer(double, double);
+void print(double, double);
+bool isReal;
 
 int main() {
 	double a, b, c, xS, xF, dx, F;
@@ -30,6 +31,9 @@ int main() {
 		cout << "Invalid xf";
 	}
 	else {
+		if ((static_cast<int>(a) & (static_cast<int>(b) | static_cast<int>(c))) != 0) {
+			isReal = true;
+		}
 		int i = xS;
 		for (i; i <= xF; i = i + dx) {
 			if (a < 0 && (c != 0)) {
@@ -41,14 +45,17 @@ int main() {
 			else {
 				F = a * (i + c);
 			}
-			printer(xS, F);
+			print(xS, F);
 		}
 		cout << string(33, '-');
 	}
 }
 
-void printer(double x, double F) {
-	cout << string(33, '-') << endl;
-	cout << "|" << setw(8) << x << setw(8) << "|"
+void print(double x, double F) {
+	if (isReal) {
+		F = static_cast<int>(F);
+	}
+	cout << string(33, '_') << endl
+		<< "|" << setw(8) << x << setw(8) << "|"
 		<< setw(8) << F << setw(8) << "|" << endl;
 }
