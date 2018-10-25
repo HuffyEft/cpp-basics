@@ -9,7 +9,7 @@ bool isReal;
 
 int main() {
 	double a, b, c, xS, xF, dx, F;
-	cout << "Enter a, b, c, xS, xF, dx";
+	cout << "Enter a, b, c, xS, xF, dx" << endl;
 	cin >> a >> b >> c >> xS >> xF >> dx;
 	cout << string(33, '-') << endl << "|" << setw(8) << "X" << setw(8) << "|"
 		<< setw(8) << "F" << setw(8) << "|" << endl;
